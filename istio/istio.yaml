@@ -32,13 +32,13 @@ spec:
         subset: ds-v1
         port:
           number: 80
-      weight: 0
+      weight: 100
     - destination:
         host: svc-my-app
         subset: ds-v2
         port:
           number: 80
-      weight: 100
+      weight: 0
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
