@@ -10,7 +10,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: deployment-my-app-v1
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 80
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
@@ -24,4 +24,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: deployment-my-app-v2
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 80
