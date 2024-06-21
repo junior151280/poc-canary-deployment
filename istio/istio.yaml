@@ -32,13 +32,13 @@ spec:
         subset: ds-v1
         port:
           number: 80
-      weight: 100
+      weight: 0
     - destination:
         host: svc-my-app
         subset: ds-v2
         port:
           number: 80
-      weight: 0
+      weight: 100
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
@@ -63,3 +63,16 @@ spec:
     trafficPolicy:
       loadBalancer:
         simple: LEAST_REQUEST
+---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: svc-my-app
+#  namespace: ns-canary-istio
+#spec:
+#  ports:
+#  - protocol: TCP
+#    port: 80
+#    targetPort: 8080
+#  selector:
+#    app: my-app
