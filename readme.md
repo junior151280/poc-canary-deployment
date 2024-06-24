@@ -1,4 +1,4 @@
-# Visão Geral do Repositório
+# Prova de Conceito: Canary Deployment em AKS
 
 Este repositório é uma coleção de arquivos e configurações destinados a facilitar o deploy e a gestão de aplicações em um ambiente Kubernetes, especificamente no Azure Kubernetes Service (AKS). Ele inclui exemplos de configurações para deploy canário, monitoramento com Prometheus, roteamento com Istio, e a infraestrutura necessária provisionada através de Bicep para testes de deploy canário no Azure.
 
